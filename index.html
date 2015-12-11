@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html  ng-app='presentation' lang="en">
 
 	<head>
 		<meta charset="utf-8">
@@ -16,7 +16,8 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+		<script src="app/app.js"></script>
   </head>
   <body>
 			<div class="reveal">
@@ -47,6 +48,17 @@
 									<p>Hello World2</p>
 									<p>Going more down?</p>
 								</section>
+							</section>
+							<section>
+								<h2>Get Services</h2>
+								<div ng-controller="presentationController">
+								<form ng-submit="findServices()">
+									<div style="display: block;">
+									<textarea style="width:100%;height:300px;" disabled>{{services | json }}</textarea>
+								</div>
+									<button type="submit" style="width:100%;">Get Services</button>
+								</form>
+								</div>
 							</section>
 
 					</div>
