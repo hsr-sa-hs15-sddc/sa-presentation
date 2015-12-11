@@ -6,18 +6,18 @@
     <title>SDDC Presentation</title>
 			<meta name="description" content="Presenation for the SA at HSR">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
-		<script src="app/app.js"></script>
+			<link rel="stylesheet" href="css/reveal.css">
+			<link rel="stylesheet" href="css/theme/white.css" id="theme">
+			<link rel="stylesheet" href="css/style.css">
+			<script>
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			</script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+			<script src="app/app.js"></script>
   </head>
   <body  ng-controller="presentationController">
 			<div class="reveal">
@@ -54,20 +54,20 @@
 								<div>
 								<form ng-submit="findServices()">
 									<div style="display: block;">
-									<textarea style="width:100%;height:300px;" disabled>{{services | json }}</textarea>
+									<textarea disabled>{{services | json }}</textarea>
 								</div>
-									<button type="submit" style="width:100%;">Get Services</button>
+									<button type="submit">Get Services</button>
 								</form>
 								</div>
 							</section>
 							<section>
-								<h2>Get Services</h2>
+								<h2>Get Servicemodules</h2>
 								<div>
 								<form ng-submit="findServiceModules()">
 									<div style="display: block;">
-									<textarea style="width:100%;height:300px;" disabled>{{servicemodules | json }}</textarea>
+									<textarea disabled>{{servicemodules | json }}</textarea>
 								</div>
-									<button type="submit" style="width:100%;">Get ServiceModules</button>
+									<button type="submit">Get ServiceModules</button>
 								</form>
 								</div>
 							</section>
