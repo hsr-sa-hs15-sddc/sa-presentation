@@ -24,24 +24,25 @@
 					<div class="slides">
 						<section>
 								<h1>SDDC Präsentation</h1>
-								<h3>Software Defined Datacenters</h3>
+								<h3>Software Defined Data Center</h3>
 								<p>
 									<small>Erstellt von Silvan Adrian, Fabian Binna</small>
 								</p>
 						</section>
-						<section>
+						<section  style="text-align:left;">
 									<h2>Inhaltsverzeichnis</h2>
 									<ul>
-										<li>Einleitung</li>
-										<li>more Points</li>
-										<li>blahblah</li>
+										<li>Analyse</li>
+										<li>Dashboard</li>
+										<li>RESTful API</li>
+										<li>Workflow</li>
+										<li>GenericAPI</li>
 									</ul>
 							</section>
 							<section>
 								<section>
-										<h2>Einleitung</h2>
-										<p>Hello World</p>
-										<p>Going Down</p>
+										<h2>API Analyse</h2>
+
 								</section>
 								<section>
 									<h2>Einleitung2</h2>
@@ -50,15 +51,111 @@
 								</section>
 							</section>
 							<section>
-								<h2>Get Services</h2>
+								<section>
+										<h2>Dashboard Analyse</h2>
+										<p>Bitnami</p>
+								</section>
+								<section>
+									<h2>Beispiel</h2>
+									<p>Hello World2</p>
+									<p>Going more down?</p>
+								</section>
+							</section>
+							<!-- Dashboard BEGIN -->
+							<section style="text-align:left;">
+							<section >
+									<h2>Dashboard</h2>
+									<ul>
+										<li>AngularJs</li>
+										<li>Bootstrap</li>
+										<li>Greift auf RESTful API zu</li>
+										<li>Systemtests</li>
+									</ul>
+								</section>
+								<section>
+									<h2>User Dashboard</h2>
+									<ul>
+										<li>Servicekatalog</li>
+										<li>Übersicht über abonnierte Services</li>
+									</ul>
+									<img src="images/user-dashboard.png" />
+								</section>
+								<section>
+									<h2>Admin Dashboard</h2>
+									<ul>
+										<li>Verwaltung Services</li>
+										<li>Verwaltung Servicemodule</li>
+									</ul>
+									<img src="images/admin-dashboard.png" />
+								</section>
+							</section>
+							<!-- Dashboard END -->
+							<!-- RESTful API BEGIN -->
+							<section style="text-align:left;">
+								 <section>
+									 <h2>RESTful API</h2>
+									 <ul>
+										 <li>Spring-Boot</li>
+										 <li>Hibernate</li>
+										 <li>Service Controller</li>
+										 <li>OrderedService Controller</li>
+										 <li>ServiceModule Controller</li>
+									 </ul>
+								 </section>
+								 <section>
+									 <h2>Persistierung</h2>
+									 <img src="images/datenmodell.png"/>
+								 </section>
+							<section>
+								<h2>Service Controller</h2>
+								<h3>GET</h3>
+								<div style="float:left;width:49%">
+								<p><b>URI:</b>/api/services</p>
 								<div>
 								<form ng-submit="findServices()">
 									<div style="display: block;">
 									<textarea disabled>{{services | json }}</textarea>
 								</div>
-									<button type="submit">Get Services</button>
+									<button type="submit">GET Services</button>
 								</form>
 								</div>
+							</div>
+							<div style="float:right;width:50%">
+							<p><b>URI:</b>/api/services/1</p>
+							<div>
+							<form ng-submit="findService()">
+								<div style="display: block;">
+								<textarea disabled>{{service | json }}</textarea>
+							</div>
+								<button type="submit">GET Service</button>
+							</form>
+							</div>
+							</div>
+							</section>
+							<section style="text-align:left;">
+								<h3>PUT</h3>
+								<div style="float:left;width:49%">
+								<p><b>URI:</b>/api/services/1</p>
+								<div>
+								<form ng-submit="putService(putservice)">
+									<div style="display: block;">
+									<textarea disabled>{{putservice | json }}</textarea>
+								</div>
+									<button type="submit">PUT Service</button>
+								</form>
+								</div>
+							</div>
+							<div style="float:right;width:50%">
+							<p><b>URI:</b>/api/services/1</p>
+							<div>
+							<form ng-submit="findService()">
+								<div style="display: block;">
+								<textarea disabled>{{service | json }}</textarea>
+							</div>
+								<button type="submit">GET Service</button>
+							</form>
+							</div>
+							</div>
 							</section>
 							<section>
 								<h2>Get Servicemodules</h2>
@@ -71,6 +168,32 @@
 								</form>
 								</div>
 							</section>
+						</section>
+							<!-- RESTful API END -->
+							<!-- Generic API BEGIN -->
+							<section style="text-align:left;">
+									<h2>GenericAPI</h2>
+									<ul>
+										<li>AngularJs</li>
+										<li>Greift auf RESTful API zu</li>
+										<li>Bootstrap</li>
+									</ul>
+								</section>
+								<section >
+									<h2>User Dashboard</h2>
+									<ul>
+										<li>Servicekatalog</li>
+										<li>Übersicht über abonnierte Services</li>
+									</ul>
+
+								</section>
+								<section>
+									<h2>Admin Dashboard</h2>
+									<p>Hello World2</p>
+									<p>Going more down?</p>
+								</section>
+							</section>
+							<!-- Generic API END -->
 
 					</div>
 			</div>
