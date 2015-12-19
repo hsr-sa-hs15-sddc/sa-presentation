@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html  ng-app='presentation' lang="en">
 
 	<head>
@@ -106,6 +106,8 @@
 									 <h2>Persistierung</h2>
 									 <img src="images/datenmodell.png"/>
 								 </section>
+								 <!-- Service Controller BEGIN -->
+								<!-- GET -->
 							<section>
 								<h2>Service Controller</h2>
 								<h3>GET</h3>
@@ -132,12 +134,13 @@
 							</div>
 							</div>
 							</section>
+							<!-- PUT -->
 							<section style="text-align:left;">
-								<h3>PUT</h3>
+								<h3>PUT (Update)</h3>
 								<div style="float:left;width:49%">
 								<p><b>URI:</b>/api/services/1</p>
 								<div>
-								<form ng-submit="putService(putservice)">
+								<form ng-submit="updateService()">
 									<div style="display: block;">
 									<textarea disabled>{{putservice | json }}</textarea>
 								</div>
@@ -157,8 +160,131 @@
 							</div>
 							</div>
 							</section>
+							<!-- POST -->
+							<section style="text-align:left;">
+								<h3>POST (Create)</h3>
+								<div style="float:left;width:49%">
+								<p><b>URI:</b>/api/services/new</p>
+								<div>
+								<form ng-submit="createService()">
+									<div style="display: block;">
+									<textarea disabled>{{postservice | json }}</textarea>
+								</div>
+									<button type="submit">POST Service</button>
+								</form>
+								</div>
+							</div>
+							<div style="float:right;width:50%">
+							<p><b>URI:</b>/api/services</p>
+							<div>
+							<form ng-submit="findServices()">
+								<div style="display: block;">
+								<textarea disabled>{{services | json }}</textarea>
+							</div>
+								<button type="submit">GET Services</button>
+							</form>
+							</div>
+							</div>
+							</section>
+							<!-- DELETE -->
+							<section style="text-align:left;">
+								<h3>DELETE</h3>
+								<div style="float:left;width:49%">
+								<p><b>URI:</b>/api/services/4</p>
+								<div>
+								<form ng-submit="deleteService()">
+									<div style="display: block;">
+									<textarea disabled>{{deleteservice | json }}</textarea>
+								</div>
+									<button type="submit">DELETE Service</button>
+								</form>
+								</div>
+							</div>
+							<div style="float:right;width:50%">
+							<p><b>URI:</b>/api/services</p>
+							<div>
+							<form ng-submit="findServices()">
+								<div style="display: block;">
+								<textarea disabled>{{services | json }}</textarea>
+							</div>
+								<button type="submit">GET Services</button>
+							</form>
+							</div>
+							</div>
+							</section>
+							<!-- POST Order -->
+							<section style="text-align:left;">
+								<h3>POST (Order)</h3>
+								<div>
+								<p><b>URI:</b>/api/services/1</p>
+								<div>
+								<form ng-submit="orderService()">
+									<div style="display: block;">
+									<textarea disabled>{{orderservice | json }}</textarea>
+								</div>
+									<button type="submit">ORDER Service</button>
+								</form>
+								</div>
+							</div>
+							</section>
+							<!-- Service Controller END -->
+							<!-- OrderedService Controller BEGIN -->
 							<section>
-								<h2>Get Servicemodules</h2>
+								<h2>OrderedService Controller</h2>
+								<h3>GET</h3>
+								<div style="float:left;width:49%">
+								<p><b>URI:</b>/api/orderedservices</p>
+								<div>
+								<form ng-submit="findOrderedServices()">
+									<div style="display: block;">
+									<textarea disabled>{{orderedservices | json }}</textarea>
+								</div>
+									<button type="submit">GET OrderedServices</button>
+								</form>
+								</div>
+							</div>
+							<div style="float:right;width:50%">
+							<p><b>URI:</b>/api/orderedservices/1</p>
+							<div>
+							<form ng-submit="findOrderedService()">
+								<div style="display: block;">
+								<textarea disabled>{{orderedservice | json }}</textarea>
+							</div>
+								<button type="submit">GET OrderedService</button>
+							</form>
+							</div>
+							</div>
+							</section>
+							<section>
+								<h3>DELETE (Cancel)</h3>
+								<div style="float:left;width:49%">
+								<p><b>URI:</b>/api/orderedservices/1</p>
+								<div>
+								<form ng-submit="cancelOrderedService()">
+									<div style="display: block;">
+									<textarea disabled>{{orderedservice | json }}</textarea>
+								</div>
+									<button type="submit">DELETE OrderedService</button>
+								</form>
+								</div>
+							</div>
+							<div style="float:right;width:50%">
+							<p><b>URI:</b>/api/orderedservices</p>
+							<div>
+							<form ng-submit="findOrderedServices()">
+								<div style="display: block;">
+								<textarea disabled>{{orderedservices | json }}</textarea>
+							</div>
+								<button type="submit">GET OrderedServices</button>
+							</form>
+							</div>
+							</div>
+							</section>
+
+							<!-- OrderedService Controller END -->
+							<!-- ServiceModules Controller END -->
+							<section>
+								<h2>Servicemodules Controller</h2>
 								<div>
 								<form ng-submit="findServiceModules()">
 									<div style="display: block;">
@@ -168,10 +294,51 @@
 								</form>
 								</div>
 							</section>
+
+
+						<section>
+							<h3>GET</h3>
+							<p><b>Categories:</b> /api/servicemodules/categories</p>
+							<div>
+							<form ng-submit="findCategories()">
+								<div style="display: block;">
+								<textarea disabled>{{categories | json }}</textarea>
+							</div>
+								<button type="submit">Get Categories</button>
+							</form>
+							</div>
 						</section>
+
+						<section>
+							<h3>GET</h3>
+							<p><b>Sizes:</b> /api/servicemodules/sizes</p>
+							<div>
+							<form ng-submit="findSizes()">
+								<div style="display: block;">
+								<textarea disabled>{{sizes | json }}</textarea>
+							</div>
+								<button type="submit">Get Sizes</button>
+							</form>
+							</div>
+						</section>
+
+						<section>
+							<h3>GET</h3>
+							<p><b>Sizes:</b> /api/servicemodules/providers</p>
+							<div>
+							<form ng-submit="findProviders()">
+								<div style="display: block;">
+								<textarea disabled>{{providers | json }}</textarea>
+							</div>
+								<button type="submit">Get Providers</button>
+							</form>
+							</div>
+						</section>
+
+					</section>
 							<!-- RESTful API END -->
-							<!-- Generic API BEGIN -->
-							<section style="text-align:left;">
+					<!-- Generic API BEGIN -->
+					<section style="text-align:left;">
 									<h2>GenericAPI</h2>
 									<ul>
 										<li>AngularJs</li>
@@ -192,9 +359,11 @@
 									<p>Hello World2</p>
 									<p>Going more down?</p>
 								</section>
-							</section>
-							<!-- Generic API END -->
+						</section>
+						<!-- Generic API END -->
+						<section data-background="https://media.giphy.com/media/hcpVSCSwDcKju/giphy.gif">
 
+						</section>
 					</div>
 			</div>
 
