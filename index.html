@@ -39,26 +39,26 @@
 										<li>GenericAPI</li>
 									</ul>
 							</section>
-							<section>
+							<section style="text-align:left;">
 								<section>
 										<h2>API Analyse</h2>
-
-								</section>
-								<section>
-									<h2>Einleitung2</h2>
-									<p>Hello World2</p>
-									<p>Going more down?</p>
+										<ul>
+											<li>Public Cloud APIs</li>
+											<li>Private Cloud APIs</li>
+											<li>Dokumentation</li>
+										</ul>
 								</section>
 							</section>
-							<section>
+							<section style="text-align:left;">
 								<section>
 										<h2>Dashboard Analyse</h2>
-										<p>Bitnami</p>
-								</section>
-								<section>
-									<h2>Beispiel</h2>
-									<p>Hello World2</p>
-									<p>Going more down?</p>
+										<ul>
+											<li>OpenStack, CloudStack</li>
+											<li>Bitnami</li>
+											<li>Self-Service</li>
+											<li>Servicekatalog</li>
+											<li>Security Features</li>
+										</ul>
 								</section>
 							</section>
 							<!-- Dashboard BEGIN -->
@@ -216,7 +216,7 @@
 							<section style="text-align:left;">
 								<h3>POST (Order)</h3>
 								<div>
-								<p><b>URI:</b>/api/services/1</p>
+								<p><b>URI:</b>/api/services/2</p>
 								<div>
 								<form ng-submit="orderService()">
 									<div style="display: block;">
@@ -339,19 +339,42 @@
 					<!-- RESTful API END -->
 					<!-- Workflow API BEGIN -->
 					<section style="text-align:left;">
+					<section>
 								<h2>Workflow</h2>
 								<ul>
 									<li>Verbindet RESTful API und Generic API</li>
+									<li>Servicemodule nach Kategorien unterteilen</li>
+									<li>Gibt Reihenfolge vor</li>
+									<li>Rollback falls Fehler auftritt</li>
 								</ul>
+					</section>
+					<section>
+						<div style="float:left;width:49%;">
+							<h3>Abonnieren</h3>
+							<img src="images/order.png" />
+						</div>
+						<div style="float:right;width:50%;">
+							<h3>kündigen</h3>
+							<img src="images/cancel.png" />
+						</div>
+					</section>
 					</section>
 
 					<!-- Workflow API END -->
 					<!-- Generic API BEGIN -->
 					<section style="text-align:left;">
+						<section>
 									<h2>GenericAPI</h2>
 									<ul>
-										<li>Unterteilung Ressourcen Compute, Storage, Network</li>
+										<li>Ressourcen Compute, Storage, Network</li>
+										<li>Provider abhängig</li>
+										<li>Konfiguration in externer Datei</li>
 									</ul>
+						</section>
+						<section>
+							<h3>Generic API Klassendiagramm</h3>
+							<img src="images/genericapi.png" />
+						</section>
 					</section>
 						<!-- Generic API END -->
 						<!-- Demo BEGIN -->
@@ -362,7 +385,7 @@
 						<!-- Demo END -->
 						<!-- The END? BEGIN -->
 						<section data-background="https://media.giphy.com/media/hcpVSCSwDcKju/giphy.gif">
-
+							<!-- oder https://media.giphy.com/media/12xSrwKxHxB3BS/giphy.gif -->
 						</section>
 						<!-- The END? END -->
 					</div>
